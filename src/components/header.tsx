@@ -1,11 +1,7 @@
 "use client";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import {
   Navbar,
@@ -25,7 +21,11 @@ const Header = () => {
   const menuItems = ["Sobre", "Valores", "Serviços", "Planos"];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-powerblue-light py-2">
+    <Navbar
+      position="static"
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-powerblue-light py-2"
+    >
       <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -134,11 +134,7 @@ const Header = () => {
       <NavbarMenu className="mt-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              href="#"
-              size="lg"
-            >
+            <Link className="w-full" href="#" size="lg">
               {item}
             </Link>
           </NavbarMenuItem>
