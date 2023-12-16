@@ -20,6 +20,11 @@ const config: Config = {
         },
         focus: "#BEF264",
       },
+      screens: {
+        xs: "400px",
+        "3xl": "1680px",
+        "4xl": "2200px",
+      },
     },
   },
   darkMode: "class",

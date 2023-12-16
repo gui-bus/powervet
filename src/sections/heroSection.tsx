@@ -6,7 +6,7 @@ import { IoCalendarOutline } from "react-icons/io5";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex w-full items-center justify-center bg-powerblue-dark bg-[url('/herobg.png')] bg-cover bg-center bg-no-repeat py-10">
+    <section className="relative flex w-full 3xl:max-w-[1580px] mx-auto items-center justify-center bg-powerblue-dark bg-[url('/herobg.png')] bg-cover bg-center bg-no-repeat py-10 3xl:rounded-b-2xl">
       <div className="flex items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
           <div className="flex w-full flex-col items-center justify-center gap-7 px-8 text-center text-white 2xl:w-6/12">
