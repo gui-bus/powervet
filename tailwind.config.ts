@@ -1,11 +1,9 @@
 import type { Config } from "tailwindcss";
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -15,9 +13,12 @@ const config: Config = {
           dark: "#05538B",
           light: "#2195E8",
         },
-      },
-      backgroundImage: {
-        "hero": "url('/herobg.png')",
+
+        primary: {
+          DEFAULT: "#2195E8",
+          foreground: "#000000",
+        },
+        focus: "#BEF264",
       },
     },
   },
