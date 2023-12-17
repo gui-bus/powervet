@@ -43,7 +43,7 @@ function FooterLink({ text }: FooterLinkProps) {
         className="footerLink hidden group-hover:block group-hover:animate-spin"
         style={{ animationIterationCount: 1, animationDuration: "0.3s" }}
       >
-        <FaChevronRight size={12} className="text-powerblue-light"/>
+        <FaChevronRight size={12} className="text-powerblue-light" />
       </span>
       {text}
     </p>
@@ -59,21 +59,20 @@ export default function Footer() {
     "Cirurgias",
     "Exames Laboratoriais",
   ];
-  
+
   const institucionals = [
     "Sobre a Clínica",
     "Política de Privacidade",
     "Nossos Profissionais",
     "Depoimentos",
   ];
-  
+
   const helps = [
     "Agendamento de Consultas",
     "Procedimentos e Prazos",
     "Formas de Pagamento",
     "Convênios e Parcerias",
   ];
-  
 
   return (
     <footer className="dark:border-gamtech mx-auto w-full cursor-default items-center justify-center bg-powerblue-light pt-8 shadow-xl md:px-0">
@@ -88,19 +87,14 @@ export default function Footer() {
           />
         </Link>
 
-        <p className="text-sm text-white text-center px-5">
+        <p className="px-5 text-center text-sm text-white">
           &copy; {currentYear} Clínica POWERVET - Todos os direitos reservados.
         </p>
 
         <div className="flex gap-1">
           <SocialLink
-            href="https://www.instagram.com/guibus_dev"
-            icon={<FaInstagram size={20} />}
-            size="sm"
-          />
-          <SocialLink
-            href="https://twitter.com/guibus_dev"
-            icon={<FaXTwitter size={20} />}
+            href="https://www.linkedin.com/in/gui-bus"
+            icon={<FaLinkedinIn size={20} />}
             size="sm"
           />
           <SocialLink
@@ -109,8 +103,8 @@ export default function Footer() {
             size="sm"
           />
           <SocialLink
-            href="https://www.linkedin.com/in/gui-bus"
-            icon={<FaLinkedinIn size={20} />}
+            href="https://www.instagram.com/guibus_dev"
+            icon={<FaInstagram size={20} />}
             size="sm"
           />
         </div>
@@ -140,7 +134,7 @@ export default function Footer() {
           </div>
         </section>
 
-        <section className="mx-auto flex flex-col items-center justify-center gap-2 pt-4 text-center text-xs px-8">
+        <section className="mx-auto flex flex-col items-center justify-center gap-2 px-8 pt-4 text-center text-xs">
           <h3 className="text-base font-medium uppercase">Atendimento</h3>
           <p>
             A Clínica POWERVET oferece atendimento contínuo, 24 horas por dia, 7
