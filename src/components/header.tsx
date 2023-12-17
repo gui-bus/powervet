@@ -47,16 +47,18 @@ const Header = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="md:hidden"
         />
-        <NavbarBrand>
-          <Image
-            src={Logo}
-            alt="POWERVET"
-            sizes="100vw"
-            height={0}
-            width={0}
-            className="h-auto w-52 object-cover"
-          />
-        </NavbarBrand>
+        <Link href="#Home">
+          <NavbarBrand>
+            <Image
+              src={Logo}
+              alt="POWERVET"
+              sizes="100vw"
+              height={0}
+              width={0}
+              className="h-auto w-52 object-cover"
+            />
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden gap-4 md:flex" justify="center">
