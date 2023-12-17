@@ -10,7 +10,7 @@ const AboutSection = () => {
       <div className="flex w-full min-w-[50%] flex-col items-center justify-center gap-6 p-5">
         <div className="text-center">
           <span className="text-xl font-light text-powerblue-light">SOBRE</span>
-          <h2 className="text-3xl font-bold xl:text-4xl uppercase">
+          <h2 className="text-3xl font-bold xl:text-4xl">
             Descubra o que torna a POWERVET tão incrível!
           </h2>
         </div>
