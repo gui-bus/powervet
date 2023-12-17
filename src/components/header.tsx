@@ -18,11 +18,27 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ["Sobre", "Valores", "Serviços", "Planos"];
+  const menuItems: { title: string; href: string }[] = [
+    {
+      title: "Sobre",
+      href: "#About",
+    },
+    {
+      title: "Valores",
+      href: "#Values",
+    },
+    {
+      title: "Serviços",
+      href: "#Services",
+    },
+    {
+      title: "Planos",
+      href: "#Plans",
+    },
+  ];
 
   return (
     <Navbar
-      position="static"
       onMenuOpenChange={setIsMenuOpen}
       className="bg-powerblue-light py-2"
     >
@@ -47,7 +63,7 @@ const Header = () => {
         <NavbarItem>
           <Link
             className="text-white transition-all duration-300 hover:font-bold"
-            href="#"
+            href="#About"
           >
             Sobre
           </Link>
@@ -55,7 +71,7 @@ const Header = () => {
         <NavbarItem>
           <Link
             className="text-white transition-all duration-300 hover:font-bold"
-            href="#"
+            href="#Values"
           >
             Valores
           </Link>
@@ -63,7 +79,7 @@ const Header = () => {
         <NavbarItem>
           <Link
             className="text-white transition-all duration-300 hover:font-bold"
-            href="#"
+            href="#Services"
           >
             Serviços
           </Link>
@@ -71,7 +87,7 @@ const Header = () => {
         <NavbarItem>
           <Link
             className="text-white transition-all duration-300 hover:font-bold"
-            href="#"
+            href="#Plans"
           >
             Planos
           </Link>
@@ -131,11 +147,11 @@ const Header = () => {
           </NavbarItem>
         </div>
       </NavbarContent>
-      <NavbarMenu className="mt-5">
+      <NavbarMenu className="pt-10">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" href="#" size="lg">
-              {item}
+          <NavbarMenuItem key={index}>
+            <Link className="w-full" href={item.href} size="lg">
+              {item.title}
             </Link>
           </NavbarMenuItem>
         ))}

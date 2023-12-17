@@ -1,6 +1,11 @@
+"use client";
 import { Button } from "@nextui-org/react";
 import React from "react";
 import { IoCalendarOutline } from "react-icons/io5";
+
+import { motion } from "framer-motion";
+import { fadeIn } from "../../animation/variants";
+import { useInView } from "react-intersection-observer";
 
 const services: { title: string; text: string }[] = [
   {
@@ -30,38 +35,53 @@ const services: { title: string; text: string }[] = [
 ];
 
 const ServicesSection = () => {
+  const [ref, inView] = useInView({ triggerOnce: false });
+  const [refQuote, inViewQuote] = useInView({ triggerOnce: false });
+
   return (
-    <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-5 lg:flex-row lg:py-16 xl:max-w-[1380px]">
-      <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start gap-6 p-5">
-        <div className="text-center md:text-start">
-          <span className="text-xl font-light text-powerblue-light">
-            SERVIÇOS
-          </span>
-          <h2 className="text-3xl font-bold xl:text-4xl">
-            Serviços de primeira qualidade para seu pet!
-          </h2>
-        </div>
+    <section
+      className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-5 lg:flex-row lg:py-16 xl:max-w-[1380px]"
+      id="Services"
+      ref={ref}
+    >
+      <motion.div
+        variants={fadeIn("down", 0)}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        exit="hidden"
+        className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-5 lg:flex-row lg:py-16 xl:max-w-[1380px]"
+      >
+        <div className="flex w-full flex-col items-center justify-center gap-6 p-5 md:items-start md:justify-start">
+          <div className="text-center md:text-start">
+            <span className="text-xl font-light text-powerblue-light">
+              SERVIÇOS
+            </span>
+            <h2 className="text-3xl font-bold xl:text-4xl">
+              Serviços de primeira qualidade para seu pet!
+            </h2>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service, index) => (
-            <div
-              className="flex flex-col items-start justify-start text-white bg-powerblue-dark p-5 rounded-bl-2xl rounded-tr-2xl"
-              key={index}
-            >
-              <h4 className="font-bold mb-2">{service.title}</h4>
-              <p className="text-sm font-light">{service.text}</p>
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <div
+                className="flex flex-col items-start justify-start rounded-bl-2xl rounded-tr-2xl bg-powerblue-dark p-5 text-white"
+                key={index}
+              >
+                <h4 className="mb-2 font-bold">{service.title}</h4>
+                <p className="text-sm font-light">{service.text}</p>
+              </div>
+            ))}
+          </div>
 
-        <Button
-          className="h-14 w-full text-base font-medium text-white"
-          color="primary"
-          endContent={<IoCalendarOutline size={30} className="ml-2" />}
-        >
-          Agendar Consulta
-        </Button>
-      </div>
+          <Button
+            className="h-14 w-full text-base font-medium text-white"
+            color="primary"
+            endContent={<IoCalendarOutline size={30} className="ml-2" />}
+          >
+            Agendar Consulta
+          </Button>
+        </div>
+      </motion.div>
     </section>
   );
 };
