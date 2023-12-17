@@ -19,7 +19,7 @@ const HeroSection = () => {
       className="relative mx-auto flex w-full items-center justify-center bg-powerblue-dark bg-[url('/herobg.png')] bg-cover bg-center bg-no-repeat py-10 3xl:max-w-[1580px] 3xl:rounded-b-2xl" id="Home"
     >
       <motion.div
-        variants={fadeIn("left", 0)}
+        variants={fadeIn("up", 0)}
         initial="hidden"
         animate={inView ? "show" : "hidden"}
         exit="hidden"
