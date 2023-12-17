@@ -57,7 +57,7 @@ const PlansSection = () => {
                   <Divider className="mt-3" />
                 </div>
               ))}
-              <span className="w-full text-3xl font-bold mt-5">
+              <span className="w-full text-3xl font-bold">
                 R$59,99/mês
               </span>
             </div>
@@ -84,7 +84,7 @@ const PlansSection = () => {
                   <Divider className="mt-3" />
                 </div>
               ))}
-              <span className="w-full text-3xl font-bold mt-5">
+              <span className="w-full text-3xl font-bold">
               R$99,99/mês
               </span>
             </div>
