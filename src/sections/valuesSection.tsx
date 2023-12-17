@@ -21,8 +21,8 @@ const values: { title: string; text: string }[] = [
 
 const ValuesSection = () => {
   return (
-    <section className="3xl:max-w-[1580px] 3xl:rounded-2xl relative  mx-auto flex w-full flex-col items-center justify-center gap-10 bg-powerblue-dark bg-[url('/valuesbg.png')] bg-cover bg-center bg-no-repeat py-10 xl:min-h-screen">
-      <h2 className="flex items-center justify-center gap-5 text-3xl font-bold text-white">
+    <section className="3xl:max-w-[1580px] 3xl:rounded-2xl relative  mx-auto flex w-full flex-col items-center justify-center gap-10 bg-powerblue-dark bg-[url('/valuesbg.png')] bg-cover bg-center bg-no-repeat py-5 md:py-16">
+      <h2 className="flex items-center justify-center gap-5 text-3xl font-bold text-white ">
         NOSSOS VALORES <BsFillPatchCheckFill size={50} />
       </h2>
 

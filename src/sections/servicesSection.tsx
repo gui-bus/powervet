@@ -31,7 +31,7 @@ const services: { title: string; text: string }[] = [
 
 const ServicesSection = () => {
   return (
-    <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-5 lg:flex-row lg:py-16 xl:max-w-[1380px] xl:min-h-screen">
+    <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-5 lg:flex-row lg:py-16 xl:max-w-[1380px]">
       <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start gap-6 p-5">
         <div className="text-center md:text-start">
           <span className="text-xl font-light text-powerblue-light">

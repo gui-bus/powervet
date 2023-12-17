@@ -9,8 +9,8 @@ const HeroSection = () => {
     <section className="relative flex w-full 3xl:max-w-[1580px] mx-auto items-center justify-center bg-powerblue-dark bg-[url('/herobg.png')] bg-cover bg-center bg-no-repeat py-10 3xl:rounded-b-2xl">
       <div className="flex items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
-          <div className="flex w-full flex-col items-center justify-center gap-7 px-8 text-start text-white 2xl:w-6/12">
-            <h1 className="text-3xl font-bold md:text-6xl">
+          <div className="flex w-full flex-col items-center justify-center gap-7 px-8 text-center lg:text-start text-white 2xl:w-6/12">
+            <h1 className="text-3xl font-bold md:text-5xl 2xl:text-6xl">
               A MELHOR ESCOLHA PARA O SEU PET
             </h1>
             <p className="text-sm font-extralight md:text-lg">
