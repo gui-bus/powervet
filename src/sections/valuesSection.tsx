@@ -41,7 +41,7 @@ const ValuesSection = () => {
         className="relative mx-auto flex  w-full flex-col items-center justify-center gap-10 bg-powerblue-dark bg-[url('/valuesbg.png')] bg-cover bg-center bg-no-repeat py-5 md:py-16 3xl:max-w-[1580px] 3xl:rounded-2xl"
       >
         <h2
-          className="flex items-center justify-center gap-5 text-3xl font-bold text-white "
+          className="flex items-center justify-center gap-5 text-2xl md:text-3xl font-bold text-white "
           id="Values"
         >
           NOSSOS VALORES <BsFillPatchCheckFill size={50} />

@@ -40,7 +40,7 @@ const ContactSection = () => {
             <div className="flex items-center justify-center gap-2">
               <HiLocationMarker size={30} className="text-powerblue-light" />
 
-              <p className="text-sm font-light md:text-base xl:text-lg">
+              <p className="text-xs font-light md:text-base xl:text-lg">
                 Rua dos Pets, 222 - Jardim das Indústrias, SJC - SP
               </p>
             </div>
@@ -48,7 +48,7 @@ const ContactSection = () => {
             <div className="flex items-center justify-center gap-2">
               <HiPhone size={30} className="text-powerblue-light" />
 
-              <p className="text-sm font-light md:text-base xl:text-lg">
+              <p className="text-xs font-light md:text-base xl:text-lg">
                 +55 (12) 0000-0000 | +55 (12) 90000-0000
               </p>
             </div>
